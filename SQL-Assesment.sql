@@ -51,6 +51,7 @@ ORDER BY hour(sign_up_at)
 -- ****************************************************************
 SELECT 
     SUM(CASE WHEN p.learn_cpp NOT IN ('') THEN 1 ELSE 0 END) AS "New Yorker learners taking C++",
+    SUM(CASE WHEN p.learn_sql NOT IN ('') THEN 1 ELSE 0 END) AS "New Yorker learners taking SQL",
     SUM(CASE WHEN p.learn_html NOT IN ('') THEN 1 ELSE 0 END) AS "New Yorker learners taking HTML",
     SUM(CASE WHEN p.learn_javascript NOT IN ('') THEN 1 ELSE 0 END) AS "New Yorker learners taking javascript",
     SUM(CASE WHEN p.learn_java NOT IN ('') THEN 1 ELSE 0 END) AS "New Yorker learners taking Java"
@@ -65,6 +66,7 @@ WHERE u.city = 'New York';
 
 SELECT 
     SUM(CASE WHEN p.learn_cpp NOT IN ('') THEN 1 ELSE 0 END) AS "Chicago learners taking C++",
+    SUM(CASE WHEN p.learn_sql NOT IN ('') THEN 1 ELSE 0 END) AS "Chicago learners taking SQL",
     SUM(CASE WHEN p.learn_html NOT IN ('') THEN 1 ELSE 0 END) AS "Chicago learners taking HTML",
     SUM(CASE WHEN p.learn_javascript NOT IN ('') THEN 1 ELSE 0 END) AS "Chicago learners taking javascript",
     SUM(CASE WHEN p.learn_java NOT IN ('') THEN 1 ELSE 0 END) AS "Chicago learners taking Java"
